@@ -66,7 +66,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random
 ###############################################################################
 # Compute a PCA (eigenfaces) on the face dataset (treated as unlabeled
 # dataset): unsupervised feature extraction / dimensionality reduction
-n_components = 150
+#n_components = [10, 15, 25, 50, 100, 250]
+#Kinda need to figure out how many PCs to use. Find the point of diminishing returns.
+n_components = 250
+#f1 scores of Ariel: [0.11, 0.33, 0.62, 0.67, 0.67, 0.67, 0.60]
 
 print "Extracting the top %d eigenfaces from %d faces" % (n_components, X_train.shape[0])
 t0 = time()
@@ -80,6 +83,9 @@ t0 = time()
 X_train_pca = pca.transform(X_train)
 X_test_pca = pca.transform(X_test)
 print "done in %0.3fs" % (time() - t0)
+
+print "Variance explained by best two PCA:"
+print pca.explained_variance_ratio_[0:2]
 
 
 ###############################################################################

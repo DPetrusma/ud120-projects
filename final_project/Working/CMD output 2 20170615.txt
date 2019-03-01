@@ -1,0 +1,867 @@
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Weighted Average Precision with Pipeline:  [ 0.7976912   0.83506494  0.83776792  0.86363636  0.84545455  0.93668831
+  0.80923131  0.7934492   0.80208333  0.76640927  0.74025974  0.8037694
+  0.82644628  0.86363636  0.83776792  0.88383838  0.84987593  0.77272727
+  0.84696385  0.81818182]
+Precision: 0.83 (+/- 0.09)
+Weighted Average Recall with Pipeline:  [ 0.72727273  0.79545455  0.86363636  0.86363636  0.86363636  0.93181818
+  0.79545455  0.70454545  0.75        0.75        0.81818182  0.84090909
+  0.72727273  0.86363636  0.86363636  0.86363636  0.75        0.77272727
+  0.81818182  0.81818182]
+Recall: 0.81 (+/- 0.12)
+Traceback (most recent call last):
+  File "poi_id_shortened.py", line 107, in <module>
+    test_classifier(clf, my_dataset, features_list)
+  File "C:\GitProjects\ud120-projects\final_project\tester.py", line 33, in test_classifier
+    for train_idx, test_idx in cv:
+TypeError: 'StratifiedShuffleSplit' object is not iterable
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Weighted Average Precision with Pipeline:  [ 0.7976912   0.83506494  0.83776792  0.86363636  0.84545455  0.93668831
+  0.80923131  0.7934492   0.80208333  0.76640927  0.74025974  0.8037694
+  0.82644628  0.86363636  0.83776792  0.88383838  0.84987593  0.77272727
+  0.84696385  0.81818182]
+Precision: 0.83 (+/- 0.09)
+Weighted Average Recall with Pipeline:  [ 0.72727273  0.79545455  0.86363636  0.86363636  0.86363636  0.93181818
+  0.79545455  0.70454545  0.75        0.75        0.81818182  0.84090909
+  0.72727273  0.86363636  0.86363636  0.86363636  0.75        0.77272727
+  0.81818182  0.81818182]
+Recall: 0.81 (+/- 0.12)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.81540       Precision: 0.28066      Recall: 0.24600 F1: 0.26219     F2: 0.25223
+        Total predictions: 15000        True positives:  492    False positives: 1261   False negatives: 1508   True negatives: 11739
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Precision: 0.83 (+/- 0.09)
+Recall: 0.81 (+/- 0.12)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.81540       Precision: 0.28066      Recall: 0.24600 F1: 0.26219     F2: 0.25223
+        Total predictions: 15000        True positives:  492    False positives: 1261   False negatives: 1508   True negatives: 11739
+
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD78D543E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.82 (+/- 0.09)
+Recall: 0.81 (+/- 0.11)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.81540       Precision: 0.28066      Recall: 0.24600 F1: 0.26219     F2: 0.25223
+        Total predictions: 15000        True positives:  492    False positives: 1261   False negatives: 1508   True negatives: 11739
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.82 (+/- 0.09)
+Recall: 0.81 (+/- 0.11)
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD781843E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Precision: 0.82 (+/- 0.09)
+Recall: 0.81 (+/- 0.10)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.81540       Precision: 0.28066      Recall: 0.24600 F1: 0.26219     F2: 0.25223
+        Total predictions: 15000        True positives:  492    False positives: 1261   False negatives: 1508     True negatives: 11739
+
+Traceback (most recent call last):
+  File "poi_id_shortened.py", line 133, in <module>
+    clf.fit(features, labels)
+  File "C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\svm\base.py", line 151, in fit
+    X, y = check_X_y(X, y, dtype=np.float64, order='C', accept_sparse='csr')
+  File "C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\utils\validation.py", line 531, in check_X_y
+    check_consistent_length(X, y)
+  File "C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\utils\validation.py", line 181, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [144, 124]
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Precision: 0.82 (+/- 0.09)
+Recall: 0.81 (+/- 0.10)
+Got a divide by zero when trying out: SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+Precision or recall may be undefined due to a lack of true positive predicitons.
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Precision: 0.82 (+/- 0.09)
+Recall: 0.81 (+/- 0.10)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.81540       Precision: 0.28066      Recall: 0.24600 F1: 0.26219     F2: 0.25223
+        Total predictions: 15000        True positives:  492    False positives: 1261   False negatives: 1508     True negatives: 11739
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 1.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 1.0
+1.0 1.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+1.0 1.0
+0.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 1.0
+0.0 0.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+0.0 0.0
+1.0 1.0
+0.0 0.0
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Precision: 0.82 (+/- 0.09)
+Recall: 0.81 (+/- 0.10)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.81540       Precision: 0.28066      Recall: 0.24600 F1: 0.26219     F2: 0.25223
+        Total predictions: 15000        True positives:  492    False positives: 1261   False negatives: 1508     True negatives: 11739
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+1.0 1.0
+0.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Precision: 0.82 (+/- 0.09)
+Recall: 0.81 (+/- 0.10)
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD78D543E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+144
+1.0 1.0
+0.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Precision: 0.82 (+/- 0.09)
+Recall: 0.81 (+/- 0.10)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.81540       Precision: 0.28066      Recall: 0.24600 F1: 0.26219     F2: 0.25223
+        Total predictions: 15000        True positives:  492    False positives: 1261   False negatives: 1508     True negatives: 11739
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+144
+1.0 1.0
+0.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.80 (+/- 0.14)
+Recall: 0.82 (+/- 0.14)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.81540       Precision: 0.28066      Recall: 0.24600 F1: 0.26219     F2: 0.25223
+        Total predictions: 15000        True positives:  492    False positives: 1261   False negatives: 1508     True negatives: 11739
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+144
+1.0 1.0
+0.0 1.0
+0.0 1.0
+0.0 1.0
+0.0 1.0
+0.0 1.0
+1.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+0.0 1.0
+1.0 1.0
+1.0 1.0
+0.0 1.0
+0.0 1.0
+1.0 1.0
+0.0 1.0
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.92      1.00      0.96       126
+        POI       1.00      0.39      0.56        18
+
+avg / total       0.93      0.92      0.91       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.80 (+/- 0.15)
+Recall: 0.85 (+/- 0.11)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.85513       Precision: 0.40137      Recall: 0.17600 F1: 0.24470     F2: 0.19827
+        Total predictions: 15000        True positives:  352    False positives:  525   False negatives: 1648     True negatives: 12475
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.92      1.00      0.96       126
+        POI       1.00      0.39      0.56        18
+
+avg / total       0.93      0.92      0.91       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.80 (+/- 0.15)
+Recall: 0.85 (+/- 0.11)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.85513       Precision: 0.40137      Recall: 0.17600 F1: 0.24470     F2: 0.19827
+        Total predictions: 15000        True positives:  352    False positives:  525   False negatives: 1648     True negatives: 12475
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.91      1.00      0.95       126
+        POI       1.00      0.28      0.43        18
+
+avg / total       0.92      0.91      0.89       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.80 (+/- 0.16)
+Recall: 0.87 (+/- 0.11)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.01, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.86107       Precision: 0.42953      Recall: 0.12800 F1: 0.19723     F2: 0.14891
+        Total predictions: 15000        True positives:  256    False positives:  340   False negatives: 1744     True negatives: 12660
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.92      1.00      0.96       126
+        POI       1.00      0.39      0.56        18
+
+avg / total       0.93      0.92      0.91       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.80 (+/- 0.16)
+Recall: 0.86 (+/- 0.12)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.85513       Precision: 0.40137      Recall: 0.17600 F1: 0.24470     F2: 0.19827
+        Total predictions: 15000        True positives:  352    False positives:  525   False negatives: 1648     True negatives: 12475
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+Traceback (most recent call last):
+  File "poi_id_shortened.py", line 62, in <module>
+    for i, j in sss:
+TypeError: 'StratifiedShuffleSplit' object is not iterable
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+Traceback (most recent call last):
+  File "poi_id_shortened.py", line 62, in <module>
+    for i, j in sss.split(features):
+TypeError: split() takes at least 3 arguments (2 given)
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+Traceback (most recent call last):
+  File "poi_id_shortened.py", line 62, in <module>
+    for i, j in sss.split(labels):
+TypeError: split() takes at least 3 arguments (2 given)
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.92      1.00      0.96       126
+        POI       1.00      0.39      0.56        18
+
+avg / total       0.93      0.92      0.91       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.80 (+/- 0.16)
+Recall: 0.86 (+/- 0.12)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.85513       Precision: 0.40137      Recall: 0.17600 F1: 0.24470     F2: 0.19827
+        Total predictions: 15000        True positives:  352    False positives:  525   False negatives: 1648     True negatives: 12475
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+Traceback (most recent call last):
+  File "poi_id_shortened.py", line 8, in <module>
+    from tester import dump_classifier_and_data
+  File "C:\GitProjects\ud120-projects\final_project\tester.py", line 36
+    for train_idx, test_idx in cv.split(features, labels)
+                                                        ^
+SyntaxError: invalid syntax
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.92      1.00      0.96       126
+        POI       1.00      0.39      0.56        18
+
+avg / total       0.93      0.92      0.91       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.80 (+/- 0.16)
+Recall: 0.86 (+/- 0.12)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.85513       Precision: 0.40137      Recall: 0.17600 F1: 0.24470     F2: 0.19827
+        Total predictions: 15000        True positives:  352    False positives:  525   False negatives: 1648        True negatives: 12475
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+I have fit the grid search
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.92      1.00      0.96       126
+        POI       1.00      0.39      0.56        18
+
+avg / total       0.93      0.92      0.91       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Precision: 0.80 (+/- 0.16)
+Recall: 0.86 (+/- 0.12)
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.85513       Precision: 0.40137      Recall: 0.17600 F1: 0.24470     F2: 0.19827
+        Total predictions: 15000        True positives:  352    False positives:  525   False negatives: 1648        True negatives: 12475
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+I have removed the outlier
+I have imported modules
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.85513       Precision: 0.40137      Recall: 0.17600 F1: 0.24470     F2: 0.19827
+        Total predictions: 15000        True positives:  352    False positives:  525   False negatives: 1648        True negatives: 12475
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+I have removed the outlier
+I have imported modules
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.85513       Precision: 0.40137      Recall: 0.17600 F1: 0.24470     F2: 0.19827
+        Total predictions: 15000        True positives:  352    False positives:  525   False negatives: 1648        True negatives: 12475
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_shortened.py
+I have removed the outlier
+I have imported modules
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=10, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=10000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.85513       Precision: 0.40137      Recall: 0.17600 F1: 0.24470     F2: 0.19827
+        Total predictions: 15000        True positives:  352    False positives:  525   False negatives: 1648        True negatives: 12475
+
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_Random_Forest.py
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+I have fit the grid search
+Best params:  {'Reduce_Dimension__n_components': 11, 'Classifier__min_samples_split': 5, 'Classifier__criterion': 'gini'}
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.97      0.99      0.98       126
+        POI       0.93      0.78      0.85        18
+
+avg / total       0.96      0.97      0.96       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD781843E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_Random_Forest.py
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+I have fit the grid search
+Best params:  {'Classifier__min_samples_leaf': 1, 'Classifier__min_samples_split': 11, 'Reduce_Dimension__n_components': 15, 'Classifier__criterion': 'gini'}
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.94      1.00      0.97       126
+        POI       1.00      0.56      0.71        18
+
+avg / total       0.95      0.94      0.94       144

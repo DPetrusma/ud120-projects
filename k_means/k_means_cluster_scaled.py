@@ -14,7 +14,7 @@ import sys
 sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
 
-
+from sklearn import preprocessing
 
 
 def Draw(pred, features, poi, mark_poi=False, name="image.png", f1_name="feature 1", f2_name="feature 2"):
@@ -48,9 +48,9 @@ data_dict.pop("TOTAL", 0)
 ### can be any key in the person-level dictionary (salary, director_fees, etc.) 
 feature_1 = "salary"
 feature_2 = "exercised_stock_options"
-feature_3 = "total_payments"
+#feature_2 = "from_messages"
 poi  = "poi"
-features_list = [poi, feature_1, feature_2, feature_3]
+features_list = [poi, feature_1, feature_2]
 data = featureFormat(data_dict, features_list )
 poi, finance_features = targetFeatureSplit( data )
 
@@ -78,11 +78,16 @@ for f in finance_features:
 print "Max salary: ", max_salary
 print "Min salary: ", min_salary
 
+min_max_scaler = preprocessing.MinMaxScaler()
+finance_features_scaled = min_max_scaler.fit_transform(finance_features)
+
+print "Scaled $200,000 salary and $1,000,000 stock options: ", min_max_scaler.transform(numpy.array([200000.0,1000000.0]).reshape(1,-1))
+
 ### in the "clustering with 3 features" part of the mini-project,
 ### you'll want to change this line to 
 ### for f1, f2, _ in finance_features:
 ### (as it's currently written, the line below assumes 2 features)
-for f1, f2, _ in finance_features:
+for f1, f2 in finance_features_scaled:
     plt.scatter( f1, f2 )
 plt.show()
 

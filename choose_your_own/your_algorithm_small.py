@@ -33,12 +33,12 @@ plt.show()
 
 from sklearn.ensemble import AdaBoostClassifier
 
-clf = AdaBoostClassifier()
+clf = AdaBoostClassifier( n_estimators = 20, learning_rate = 0.5 )
 
 clf.fit( features_train, labels_train )
 
-clf.score( features_test, labels_test )
-
+#Can I beat 93.6%?
+print clf.score( features_test, labels_test )
 
 try:
     prettyPicture(clf, features_test, labels_test)

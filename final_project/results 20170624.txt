@@ -1,0 +1,53 @@
+I have removed the outliers
+There are  18 POIs and 125 non-POIs
+I have imported modules
+I am running a Naive Bayes Classifier
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Best parameters for Naive Bayes: {'Feature_selection__k': 5}
+None
+Classification Report for Naive Bayes:
+             precision    recall  f1-score   support
+
+    Not POI       0.91      0.94      0.93       125
+        POI       0.50      0.39      0.44        18
+
+avg / total       0.86      0.87      0.87       143
+
+Best k features for Naive Bayes:  ['salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options']
+I am running an SVC classifier
+Best parameters for SVC: {'Classifier__C': 50000.0,
+ 'Classifier__gamma': 0.1,
+ 'Feature_selection__k': 11}
+None
+Classification Report for SVC:
+             precision    recall  f1-score   support
+
+    Not POI       0.96      1.00      0.98       125
+        POI       1.00      0.72      0.84        18
+
+avg / total       0.97      0.97      0.96       143
+
+Best k features for SVC  ['salary', 'total_payments', 'loan_advances', 'bonus', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'long_term_incentive', 'restricted_stock', 'shared_receipt_with_poi']
+I am running a random forest classifier
+Best parameters for Random Forest: {'Classifier__criterion': 'gini',
+ 'Classifier__min_samples_leaf': 1,
+ 'Classifier__min_samples_split': 5,
+ 'Feature_selection__k': 3}
+None
+Classification Report for Random Forest:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      0.98      0.96       125
+        POI       0.85      0.61      0.71        18
+
+avg / total       0.93      0.94      0.93       143
+
+Best k features for Random Forest:  ['bonus', 'total_stock_value', 'exercised_stock_options']
+Best f1 score was 0.962557998611 coming from  SVC
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Select_Features', SelectKBest(k=11, score_func=<function f_classif at 0x0000000005312358>)), ('Classifier', SVC(C=50000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.82220       Precision: 0.31865      Recall: 0.29300 F1: 0.30529     F2: 0.29779
+        Total predictions: 15000        True positives:  586    False positives: 1253   False negatives: 1414   True negatives: 11747

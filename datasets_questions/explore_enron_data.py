@@ -16,7 +16,14 @@
 """
 
 import pickle
+import pprint
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
+
+print "Number of people: ", len(enron_data)
+pprint.pprint(enron_data['TAYLOR MITCHELL S'])
+print "Features per person: ", len(enron_data['TAYLOR MITCHELL S'])
+
+print "Number of POI: ", sum( 1 for i in enron_data if enron_data[i]['poi'] == True)
 
 

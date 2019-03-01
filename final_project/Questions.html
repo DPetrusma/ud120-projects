@@ -1,0 +1,115 @@
+<html>
+<body>
+<ol>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%">The goal of
+	this project is to identify persons of interest (POIs) in the Enron
+	fraud case based on publicly available financial details and the
+	number of emails sent to and from each person. As there are many
+	numerical values for each person (19 possible features in total), discovering which
+	are important and which are secondary is a perfect problem for
+	machine learning algorithms. They can quickly explore the features,
+	keeping those that differentiate well between POIs and non-POIs and
+	discarding the rest to maximise predictive power and minimise
+	over-fitting. We have 18 POIs, and once outliers are taken out, 125 non-POIs.</p>
+	<p style="margin-bottom: 0cm; line-height: 100%">The initial outlier
+	that I decided to take out was the one identified in the training
+	exercises &ndash; the "TOTAL" data point, as it is
+	obviously a quirk of the spreadsheet data and gives us no useful
+	information. I considered removing "MARTIN AMANDA K" due
+	to the extremely high value of "long_term_incentive",
+	and this did improve my score, but just because a data point doesn't
+	fit nicely doesn't mean it should be ignored. Her results
+	provide meaningful information and show that someone could have
+	earned an extremely large bonus without being a POI. As another odd
+    point in the spreadsheet, I took out "TRAVEL AGENCY IN THE PARK", not
+    being a person, and "LOCKHART EUGENE E" as he lacked any non-NaN values</p>
+	<p style="margin-bottom: 0cm; line-height: 100%">The difficult part
+	is going to be building a good algorithm with such a limited data
+	set &ndash; there are only 143 data points (excluding the 3
+	outliers that were removed).</p>
+</ol>
+<ol start="2">
+	<li/>
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	The five features I ended up using were salary, bonus,
+	deferred_income, total_stock_value, and exercised_stock_options. My method was to include all
+	features and implement Select k-best in a grid
+	search to optimise the number of features to keep. Another
+	feature selection method I tried was removing those with more than
+	70% of the values as NaN. However, I realised that the fact that a certain feature had many NaNs
+	may have been a good predictive factor. Scaling was included, as I
+	think that to use financial and email features like salary and
+	number of emails sent together, a lack of feature scaling means the
+	far higher order of magnitude of a salary will overwhelm the email
+	numbers.</p>
+	<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	The feature that I created and tried to use was
+	"salary_proportion_of_total_payments", which was the
+	salary divided by the total payments. My thinking was that someone
+	who received relatively large non-salary payments may have been in a
+	different position that someone who did not. However, this feature was not selected by the Select k-best and so 
+	did not improve the score .</p>
+	<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	The feature scores (to four decimal places) from the top five features from Select K Best were: <br/>
+    salary: 18.2897 <br/>
+    bonus: 20.7923 <br/>
+    deferred_income: 11.4585 <br/>
+    total_stock_value: 24.1829 <br/>
+    exercised_stock_options: 24.8151
+    </p>
+	<li/>
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	The algorithm I ended up using was Naive Bayes as it seemed to
+	provide the greatest F1 score from the testing code. I also tried an
+	SVM, and a Random Forest Classifier. However, using the "f1_weighted" scorer with a GridSearch actually returned the Random Forest as the best classifier, so at the end of the code I manually chose the Naive Bayes. The F1 score (from tester.py) for my Naive Bayes
+	was 0.38696, for the SVM it was 0.19561, and for the Random Forest
+	it was 0.30862. This surprised me, as the SVMs and Random Forest
+	Classifiers allow far more parameter tuning which I did with a Grid
+	Search, yet the best Random
+	Forest performance was significantly worse than a simple Naive
+	Bayes. All of these used Feature Scaling.</p>
+	<li/>
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	Tuning is to adjust the parameters over a range of values to maximise the desired scoring function. Most algorithms have parameters to adjust such as min_samples_split for regression tree classifiers, or gamma for SVMs. It can be performed automatically with a grid search in sklearn.
+    The tuning that I performed started out as a Grid Search with the
+	Select K Best and then a few parameters of the the Random Forest/SVM, with a range of values
+	taken from the previous lessons. As mentioned above, though, even
+	with this tuning the algorithms seemed to perform far worse than the
+	simple Naive Bayes with no parameters to tune.</p>
+	<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	For the classifiers I did tune, I included "min_samples_split",
+	"min_samples_leaf" for the Random Forest, and for the SVM I included "gamma" and
+	"C". </p>
+    <p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    Failing to properly tune parameters can lead to the algorithm performing very poorly, or simply getting stuck in a local maximum (or minimum, depending on the scorer). For example, in a clustering algorithm, there may be 3 real clusters, but you only test 5, 6, and 7 clusters, one will be chosen as the best but it is not the correct result. It could be that I did not choose enough parameters to tune or simply the wrong ones, thus leading to sub-par performance when compared to the Naive Bayes.</p>
+	<li/>
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	Validation is the process of checking the results of the classifier
+	against a different set of data that it was trained on. The classic
+	mistake is training, validating and testing on the same set of data,
+	and so to avoid that I made sure to use a Stratified Shuffle Split
+	in my initial grid searches and classification reports. I also used
+	the tester.py code to measure the performance of my classifiers
+	which uses a 1000-fold Stratified Shuffle Split to randomise the
+	small amount of data into train and test sets.</p>
+	<li/>
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	For my best-performing Naive Bayes, the average precision (as
+	measured by the tester function) was 0.41964 and the average recall
+	was 0.35900. This means that out of the 1,000 repetitions of the
+	stratified shuffle split with a testing size of 10%, about 42% of
+	our predicted POIs were actually POIs (precision), and there was about a 36%
+	chance of labelling a POI as a POI (recall), i.e., about 64% of the POIs were
+	not flagged as a POI. These numbers are much more useful than
+	accuracy due to the skewed nature of the label; since most points
+	are non-POI, we could easily label them all non-POI an achieve a
+	good overall accuracy score.</p>
+	<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	On the surface, this does seem rather low to me, but I understand
+	that with such a small data set (145 points), even being clever
+	about training and testing may not yield very high results for these
+	metrics as the variance is too high.</p>
+</ol>
+</body>
+</html>

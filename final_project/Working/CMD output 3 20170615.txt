@@ -1,0 +1,261 @@
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I've popped the outlier
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+I have fit the grid search
+Best params:  {'Classifier__gamma': 0.1, 'Reduce_Dimension__n_components': 10, 'Classifier__C': 100000.0}
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+Traceback (most recent call last):
+  File "poi_id.py", line 106, in <module>
+    scores = cross_val_score(clf_gs, features, labels, cv = cv, scoring = "precision_weighted")
+NameError: name 'cv' is not defined
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I've popped the outlier
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+I have fit the grid search
+Best params:  {'Classifier__gamma': 0.1, 'Reduce_Dimension__n_components': 10, 'Classifier__C': 100000.0}
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      1.00      0.98       126
+        POI       1.00      0.67      0.80        18
+
+avg / total       0.96      0.96      0.95       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Weighted Average Precision with Pipeline:  [ 0.7856405   0.80923131  0.83776792  0.73725055  0.74312896  0.91754757
+  0.74312896  0.7934492   0.78084416  0.80923131  0.73725055  0.8037694
+  0.80208333  0.84545455  0.7856405   0.89957717  0.84502165  0.8037694
+  0.80677431  0.74312896]
+Precision: 0.80 (+/- 0.10)
+Weighted Average Recall with Pipeline:  [ 0.88636364  0.79545455  0.86363636  0.79545455  0.84090909  0.90909091
+  0.84090909  0.70454545  0.84090909  0.79545455  0.79545455  0.84090909
+  0.75        0.86363636  0.88636364  0.88636364  0.72727273  0.84090909
+  0.77272727  0.84090909]
+Recall: 0.82 (+/- 0.11)
+Traceback (most recent call last):
+  File "poi_id.py", line 133, in <module>
+    ### check your results. You do not need to change anything below, but make sure
+NameError: name 'clf' is not defined
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD781843E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+I have fit the grid search
+Best params:  {'Classifier__gamma': 0.001, 'Reduce_Dimension__n_components': 13, 'Classifier__C': 100000.0}
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.91      1.00      0.95       126
+        POI       1.00      0.28      0.43        18
+
+avg / total       0.92      0.91      0.89       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD781843E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+  File "poi_id.py", line 42
+    my_dataset = data_dict
+             ^
+SyntaxError: invalid syntax
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I have removed the outlier
+Traceback (most recent call last):
+  File "poi_id.py", line 36, in <module>
+    features_list_empty_ratio[feature] = len([my_dataset[i][feature] for i in my_dataset if my_dataset[i][feature] == "NaN"]) / float(len([my_dataset[i][feature] for i in my_dataset]))
+NameError: name 'my_dataset' is not defined
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I have removed the outlier
+Traceback (most recent call last):
+  File "poi_id.py", line 42, in <module>
+    pprint(sorted(features_list_empty_ratio, features_list_empty_ratio.get))
+TypeError: comparison function must return int, not float
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I have removed the outlier
+{'bonus': 0.4413793103448276,
+ 'deferral_payments': 0.7379310344827587,
+ 'deferred_income': 0.6689655172413793,
+ 'director_fees': 0.8896551724137931,
+ 'exercised_stock_options': 0.30344827586206896,
+ 'expenses': 0.35172413793103446,
+ 'loan_advances': 0.9793103448275862,
+ 'long_term_incentive': 0.5517241379310345,
+ 'other': 0.36551724137931035,
+ 'poi': 0.0,
+ 'restricted_stock': 0.2482758620689655,
+ 'restricted_stock_deferred': 0.8827586206896552,
+ 'salary': 0.35172413793103446,
+ 'total_payments': 0.14482758620689656,
+ 'total_stock_value': 0.13793103448275862}
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD781843E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I have removed the outlier
+{'bonus': 0.4413793103448276,
+ 'deferral_payments': 0.7379310344827587,
+ 'deferred_income': 0.6689655172413793,
+ 'director_fees': 0.8896551724137931,
+ 'exercised_stock_options': 0.30344827586206896,
+ 'expenses': 0.35172413793103446,
+ 'from_messages': 0.4068965517241379,
+ 'from_poi_to_this_person': 0.4068965517241379,
+ 'from_this_person_to_poi': 0.4068965517241379,
+ 'loan_advances': 0.9793103448275862,
+ 'long_term_incentive': 0.5517241379310345,
+ 'other': 0.36551724137931035,
+ 'poi': 0.0,
+ 'restricted_stock': 0.2482758620689655,
+ 'restricted_stock_deferred': 0.8827586206896552,
+ 'salary': 0.35172413793103446,
+ 'shared_receipt_with_poi': 0.4068965517241379,
+ 'to_messages': 0.4068965517241379,
+ 'total_payments': 0.14482758620689656,
+ 'total_stock_value': 0.13793103448275862}
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD781843E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I have removed the outlier
+{'bonus': 0.4413793103448276,
+ 'deferral_payments': 0.7379310344827587,
+ 'deferred_income': 0.6689655172413793,
+ 'exercised_stock_options': 0.30344827586206896,
+ 'expenses': 0.35172413793103446,
+ 'from_messages': 0.4068965517241379,
+ 'from_poi_to_this_person': 0.4068965517241379,
+ 'from_this_person_to_poi': 0.4068965517241379,
+ 'long_term_incentive': 0.5517241379310345,
+ 'other': 0.36551724137931035,
+ 'poi': 0.0,
+ 'restricted_stock': 0.2482758620689655,
+ 'salary': 0.35172413793103446,
+ 'shared_receipt_with_poi': 0.4068965517241379,
+ 'to_messages': 0.4068965517241379,
+ 'total_payments': 0.14482758620689656,
+ 'total_stock_value': 0.13793103448275862}
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD781843E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I have removed the outlier
+{'bonus': 0.4413793103448276,
+ 'deferred_income': 0.6689655172413793,
+ 'exercised_stock_options': 0.30344827586206896,
+ 'expenses': 0.35172413793103446,
+ 'from_messages': 0.4068965517241379,
+ 'from_poi_to_this_person': 0.4068965517241379,
+ 'from_this_person_to_poi': 0.4068965517241379,
+ 'long_term_incentive': 0.5517241379310345,
+ 'other': 0.36551724137931035,
+ 'poi': 0.0,
+ 'restricted_stock': 0.2482758620689655,
+ 'salary': 0.35172413793103446,
+ 'shared_receipt_with_poi': 0.4068965517241379,
+ 'to_messages': 0.4068965517241379,
+ 'total_payments': 0.14482758620689656,
+ 'total_stock_value': 0.13793103448275862}
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+I have fit the grid search
+Best params:  {'Classifier__gamma': 0.005, 'Reduce_Dimension__n_components': 13, 'Classifier__C': 100000.0}
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.92      1.00      0.96       126
+        POI       1.00      0.39      0.56        18
+
+avg / total       0.93      0.92      0.91       144
+
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+forrtl: error (200): program aborting due to control-C event
+Image              PC                Routine            Line        Source
+libifcoremd.dll    00007FFD781843E4  Unknown               Unknown  Unknown
+KERNELBASE.dll     00007FFD96627C23  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFD98D48364  Unknown               Unknown  Unknown
+ntdll.dll          00007FFD997570D1  Unknown               Unknown  Unknown
+
+C:\GitProjects\ud120-projects\final_project>python poi_id_bayes.py
+I have removed the outlier
+I have imported modules
+I have set up the Grid Search
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+I have fit the grid search
+Best params:  {'Reduce_Dimension__n_components': 7}
+Classification Report:
+             precision    recall  f1-score   support
+
+    Not POI       0.92      0.90      0.91       125
+        POI       0.40      0.44      0.42        18
+
+avg / total       0.85      0.85      0.85       143

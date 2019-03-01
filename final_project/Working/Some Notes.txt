@@ -1,0 +1,42 @@
+Feature processing:
+    Outliers
+    PCA (first)
+    Create new features
+    Feature scaling
+    Feature selection
+    
+Algorithms to choose from:
+    Naive Bayes (assume all features are independent)
+    SVM (creates decision hyperplanes)
+    Decision Tree (sensitive to small change in input, but the cross-validation stuff can handle that. Prone to overfitting)
+    k-means clustering (succumbs to local minima. Might not be a good shape for clustering)
+    
+Evaluate:
+    Use the cross validation
+    
+Create a pipeline to do PCA
+
+Best results so far (Naive Bayes):
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=8, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', GaussianNB(priors=None))])
+        Accuracy: 0.82007       Precision: 0.35019      Recall: 0.40850 F1: 0.37711     F2: 0.39534
+        Total predictions: 15000        True positives:  817    False positives: 1516   False negatives: 1183   True negatives: 11484
+        
+Best SVC:
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=13, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.005, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.86147       Precision: 0.43925      Recall: 0.14100 F1: 0.21347     F2: 0.16316
+        Total predictions: 15000        True positives:  282    False positives:  360   False negatives: 1718   True negatives: 12640
+        
+ Best Forest:
+ Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Reduce_Dimension', PCA(copy=True, iterated_power='auto', n_components=15, random_state=None,
+  svd_solver='randomized', tol=0.0, whiten=False)), ('Classifier', RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini...imators=10, n_jobs=1, oob_score=False, random_state=None,
+            verbose=0, warm_start=False))])
+        Accuracy: 0.85440       Precision: 0.40476      Recall: 0.19550 F1: 0.26365     F2: 0.21805
+        Total predictions: 15000        True positives:  391    False positives:  575   False negatives: 1609   True negatives: 12425
+        
+ Best Tree:
+ 

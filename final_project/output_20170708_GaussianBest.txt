@@ -1,0 +1,136 @@
+C:\GitProjects\ud120-projects\final_project>python poi_id.py
+I have removed the outliers
+There are  18 POIs and 125 non-POIs
+I have imported modules
+I am running a Naive Bayes Classifier
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Best parameters for Naive Bayes: {'Feature_selection__k': 5}
+None
+Feature scores from Select K Best for Naive Bayes: [('salary', 18.289684043404513),
+ ('deferral_payments', 0.22461127473600509),
+ ('total_payments', 8.7727777300916809),
+ ('loan_advances', 7.1840556582887247),
+ ('bonus', 20.792252047181538),
+ ('restricted_stock_deferred', 0.065499652909891237),
+ ('deferred_income', 11.458476579280697),
+ ('total_stock_value', 24.182898678566872),
+ ('expenses', 6.0941733106389666),
+ ('exercised_stock_options', 24.815079733218194),
+ ('other', 4.1874775069953785),
+ ('long_term_incentive', 9.9221860131898385),
+ ('restricted_stock', 9.212810621977086),
+ ('director_fees', 2.126327802007705),
+ ('to_messages', 1.6463411294420094),
+ ('from_poi_to_this_person', 5.2434497133749574),
+ ('from_messages', 0.16970094762175436),
+ ('from_this_person_to_poi', 2.3826121082276743),
+ ('shared_receipt_with_poi', 8.5894207316823774),
+ ('salary_proportion_of_total_payments', 2.6874175908440368)]
+None
+Classification Report for Naive Bayes:
+             precision    recall  f1-score   support
+
+    Not POI       0.91      0.94      0.93       125
+        POI       0.50      0.39      0.44        18
+
+avg / total       0.86      0.87      0.87       143
+
+Best k features for Naive Bayes:  ['salary', 'bonus', 'deferred_income', 'total_stock_value', 'exercised_stock_options']
+I am running an SVC classifier
+C:\Users\Dylan\Anaconda2\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Best parameters for SVC: {'Classifier__C': 100000.0,
+ 'Classifier__gamma': 0.1,
+ 'Feature_selection__k': 2}
+None
+Feature scores from Select K Best for SVC: [('salary', 18.289684043404513),
+ ('deferral_payments', 0.22461127473600509),
+ ('total_payments', 8.7727777300916809),
+ ('loan_advances', 7.1840556582887247),
+ ('bonus', 20.792252047181538),
+ ('restricted_stock_deferred', 0.065499652909891237),
+ ('deferred_income', 11.458476579280697),
+ ('total_stock_value', 24.182898678566872),
+ ('expenses', 6.0941733106389666),
+ ('exercised_stock_options', 24.815079733218194),
+ ('other', 4.1874775069953785),
+ ('long_term_incentive', 9.9221860131898385),
+ ('restricted_stock', 9.212810621977086),
+ ('director_fees', 2.126327802007705),
+ ('to_messages', 1.6463411294420094),
+ ('from_poi_to_this_person', 5.2434497133749574),
+ ('from_messages', 0.16970094762175436),
+ ('from_this_person_to_poi', 2.3826121082276743),
+ ('shared_receipt_with_poi', 8.5894207316823774),
+ ('salary_proportion_of_total_payments', 2.6874175908440368)]
+None
+Classification Report for SVC:
+             precision    recall  f1-score   support
+
+    Not POI       0.90      1.00      0.95       125
+        POI       1.00      0.22      0.36        18
+
+avg / total       0.91      0.90      0.87       143
+
+Best k features for SVC  ['total_stock_value', 'exercised_stock_options']
+I am running a random forest classifier
+Best parameters for Random Forest: {'Classifier__criterion': 'gini',
+ 'Classifier__min_samples_leaf': 2,
+ 'Classifier__min_samples_split': 5,
+ 'Feature_selection__k': 3}
+None
+Feature scores from Select K Best for Random Forest: [('salary', 18.289684043404513),
+ ('deferral_payments', 0.22461127473600509),
+ ('total_payments', 8.7727777300916809),
+ ('loan_advances', 7.1840556582887247),
+ ('bonus', 20.792252047181538),
+ ('restricted_stock_deferred', 0.065499652909891237),
+ ('deferred_income', 11.458476579280697),
+ ('total_stock_value', 24.182898678566872),
+ ('expenses', 6.0941733106389666),
+ ('exercised_stock_options', 24.815079733218194),
+ ('other', 4.1874775069953785),
+ ('long_term_incentive', 9.9221860131898385),
+ ('restricted_stock', 9.212810621977086),
+ ('director_fees', 2.126327802007705),
+ ('to_messages', 1.6463411294420094),
+ ('from_poi_to_this_person', 5.2434497133749574),
+ ('from_messages', 0.16970094762175436),
+ ('from_this_person_to_poi', 2.3826121082276743),
+ ('shared_receipt_with_poi', 8.5894207316823774),
+ ('salary_proportion_of_total_payments', 2.6874175908440368)]
+None
+Feature importance for Random Forest:  [ 0.42165825  0.32359617  0.25474558]
+Classification Report for Random Forest:
+             precision    recall  f1-score   support
+
+    Not POI       0.95      0.99      0.97       125
+        POI       0.92      0.67      0.77        18
+
+avg / total       0.95      0.95      0.95       143
+
+Best k features for Random Forest:  ['bonus', 'total_stock_value', 'exercised_stock_options']
+Best f1 score was 0.947581198056 coming from  Random Forest
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Select_Features', SelectKBest(k=3, score_func=<function f_classif at 0x00000000052D2358>)), ('Classifier', RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', m...imators=10, n_jobs=1, oob_score=False, random_state=None,
+            verbose=0, warm_start=False))])
+        Accuracy: 0.86987       Precision: 0.52956      Recall: 0.21500 F1: 0.30583     F2: 0.24399
+        Total predictions: 15000        True positives:  430    False positives:  382   False negatives: 1570   True negatives: 12618
+
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Select_Features', SelectKBest(k=5, score_func=<function f_classif at 0x00000000052D2358>)), ('Classifier', GaussianNB(priors=None))])
+        Accuracy: 0.84833       Precision: 0.41964      Recall: 0.35900 F1: 0.38696     F2: 0.36968
+        Total predictions: 15000        True positives:  718    False positives:  993   False negatives: 1282   True negatives: 12007
+
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Select_Features', SelectKBest(k=2, score_func=<function f_classif at 0x00000000052D2358>)), ('Classifier', SVC(C=100000.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False))])
+        Accuracy: 0.87060       Precision: 0.57143      Recall: 0.11800 F1: 0.19561     F2: 0.14026
+        Total predictions: 15000        True positives:  236    False positives:  177   False negatives: 1764   True negatives: 12823
+
+Pipeline(steps=[('Scale', MinMaxScaler(copy=True, feature_range=(0, 1))), ('Select_Features', SelectKBest(k=3, score_func=<function f_classif at 0x00000000052D2358>)), ('Classifier', RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', m...imators=10, n_jobs=1, oob_score=False, random_state=None,
+            verbose=0, warm_start=False))])
+        Accuracy: 0.87007       Precision: 0.53114      Recall: 0.21750 F1: 0.30862     F2: 0.24663
+        Total predictions: 15000        True positives:  435    False positives:  384   False negatives: 1565   True negatives: 12616
