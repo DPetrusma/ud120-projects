@@ -18,7 +18,7 @@
 import pickle
 import pprint
 
-enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
+enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"))
 
 print "Number of people: ", len(enron_data)
 pprint.pprint(enron_data['TAYLOR MITCHELL S'])
